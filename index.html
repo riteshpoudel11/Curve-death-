@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curve Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Curve Chat</h1> <!-- App Name Added Here -->
+        
+        <div id="login-section">
+            <h2>Login</h2>
+            <input type="password" id="password" placeholder="Admin Password (optional)">
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="username-section" style="display: none;">
+            <h2>Set Username</h2>
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="setUsername()">Set Username</button>
+        </div>
+
+        <div id="main-section" style="display: none;">
+            <h2>Welcome, <span id="current-username"></span>!</h2>
+            <button onclick="logout()">Logout</button>
+
+            <div id="post-creation">
+                <h3>Create a New Post</h3>
+                <textarea id="post-content" placeholder="Write your post here"></textarea>
+                <input type="file" id="image-upload" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                <label for="image-upload" class="upload-button">Upload Image</label>
+                <img id="image-preview" style="display:none; max-width: 100%; margin-top: 10px; border-radius: 10px;" alt="Image Preview">
+                <button onclick="createPost()">Post</button>
+            </div>
+
+            <h3>Posts</h3>
+            <div id="post-list"></div>
+        </div>
+    </div>
+
+    <!-- Notice Button -->
+    <div id="notice-button" onclick="toggleNotice()" style="position: fixed; left: 10px; top: 10px; background-color: #ffcc00; padding: 10px; border-radius: 5px; cursor: pointer; z-index: 10;">
+        Notice
+    </div>
+    
+    <!-- Notice Content -->
+    <div id="notice-content" style="display: none; position: fixed; left: 50%; top: 60px; transform: translateX(-50%); background-color: #fff3cd; border: 1px solid #ffeeba; padding: 10px; border-radius: 5px; max-width: 85%; z-index: 10;">
+        <p>If you are truly interested in connecting with us, then only use this app.</p>
+        <p>If you are interested in buying it, you can contact the creator on Facebook:</p>
+        <a href="https://www.facebook.com/profile.php?id=61551393276636" target="_blank">
+            <img src="https://i.postimg.cc/fLpK1v17/images.png" alt="Facebook" style="width: 30px; vertical-align: middle;"> 
+            Facebook Profile
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
